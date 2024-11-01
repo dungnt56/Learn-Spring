@@ -1,0 +1,29 @@
+2022-07-30 10:42:59.213  INFO 11304 --- [main] com.sapo.edu.demo.DemoApplication        : Starting DemoApplication on DungNT-TTS with PID 11304 (started by nguye in D:\Source code\Spring boot\spring-dependency-injection-master)
+2022-07-30 10:42:59.215  INFO 11304 --- [main] com.sapo.edu.demo.DemoApplication        : No active profile set, falling back to default profiles: default
+2022-07-30 10:43:00.214  INFO 11304 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-07-30 10:43:00.240  INFO 11304 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-30 10:43:00.241  INFO 11304 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2022-07-30 10:43:00.321  INFO 11304 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-30 10:43:00.321  INFO 11304 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1057 ms
+2022-07-30 10:43:00.518  INFO 11304 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-30 10:43:00.683  INFO 11304 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-07-30 10:43:00.686  INFO 11304 --- [main] com.sapo.edu.demo.DemoApplication        : Started DemoApplication in 1.877 seconds (JVM running for 2.149)
+2022-07-30 10:43:00.689  INFO 11304 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-07-30 10:43:00.692 ERROR 11304 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:784) ~[spring-boot-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:765) ~[spring-boot-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:319) ~[spring-boot-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) ~[spring-boot-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1204) ~[spring-boot-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at com.sapo.edu.demo.DemoApplication.main(DemoApplication.java:15) ~[classes/:na]
+Caused by: java.lang.NullPointerException: Cannot invoke "java.math.BigDecimal.toString()" because "this.moneyAtm" is null
+	at com.sapo.edu.demo.BidvAtm.printCurrentMoney(BidvAtm.java:39) ~[classes/:na]
+	at com.sapo.edu.demo.DemoApplication.run(DemoApplication.java:33) ~[classes/:na]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:781) ~[spring-boot-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	... 5 common frames omitted
+
+2022-07-30 10:43:00.695  INFO 11304 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
